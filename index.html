@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no" />
+  <meta name="theme-color" content="#10163a" />
+  <title>Schiffy Rage Run</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@600;800&display=swap" rel="stylesheet" />
+  <script type="module" crossorigin src="./assets/index-Bk059zvA.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-BBK20tQ-.css">
+</head>
+<body>
+  <div id="app"></div>
+  <div id="ui">
+    <div id="loading" class="screen show"><div class="logo">SCHIFFY</div><p class="tiny">Loading…</p></div>
+    <div id="menu" class="screen">
+      <div class="logo">SCHIFFY</div>
+      <div class="sub">RAGE RUN</div>
+      <div class="menu-btns">
+        <button id="btn-play" class="btn big">Solo</button>
+        <button id="btn-board" class="btn big ghost">🏆 Leaderboard</button>
+      </div>
+      <div class="sound-row">
+        <button class="pill icon tg-music" aria-label="Music on/off"></button>
+      </div>
+      <div id="levels"></div>
+      <p class="tiny desktop-only">Arrows / WASD to move · Space to jump · R to restart · Esc to pause · M for music</p>
+      <p class="tiny credit">Robot model by niko-3d-models</p>
+    </div>
+    <div id="pause" class="screen"><div class="card">
+      <h2>Paused</h2>
+      <button id="btn-resume" class="btn">Resume</button>
+      <button id="btn-restart" class="btn">Restart level</button>
+      <div class="sound-row">
+        <button class="pill icon tg-music" aria-label="Music on/off"></button>
+      </div>
+      <button id="btn-quit" class="btn ghost">Quit to title</button>
+    </div></div>
+    <div id="end" class="screen"><div class="card">
+      <h2 id="end-title">All worlds cleared!</h2>
+      <p id="end-stats"></p>
+      <form id="end-submit" style="display:none">
+        <input id="end-name" maxlength="16" placeholder="Your name or @handle" autocomplete="off" required>
+        <button id="end-send" class="btn" type="submit">Post to leaderboard</button>
+      </form>
+      <p id="end-msg" class="tiny"></p>
+      <button id="end-board" class="btn ghost">🏆 Leaderboard</button>
+      <button id="btn-again" class="btn">Play again</button>
+    </div></div>
+    <div id="board" class="screen"><div class="card wide">
+      <h2>🏆 Fewest Deaths</h2>
+      <p class="tiny">Full runs only: 1-1 to the final boss, no skipping.</p>
+      <div id="board-list"></div>
+      <button id="board-back" class="btn ghost">Back</button>
+    </div></div>
+    <div id="hud">
+      <div class="pill" id="hud-level"></div>
+      <div class="right">
+        <div class="pill" id="hud-time">⏱ 0.0s</div>
+        <div class="pill" id="hud-deaths">☠ 0</div>
+        <button class="pill icon tg-music" aria-label="Music on/off"></button>
+        <button class="pill icon" id="btn-pause" aria-label="Pause">❚❚</button>
+      </div>
+    </div>
+    <div id="banner"><div class="b-title"></div><div class="b-hint"></div></div>
+    <div id="toast"></div>
+    <div id="deathcard"><div class="d-big"></div><div class="d-sub"></div></div>
+    <div id="touch">
+      <div class="dpad"><button data-k="left" aria-label="Left">◀</button><button data-k="right" aria-label="Right">▶</button></div>
+      <button data-k="jump" class="jump" aria-label="Jump">▲</button>
+    </div>
+    <div id="rotate"><div>↻</div><p>Turn your phone sideways</p></div>
+  </div>
+</body>
+</html>
